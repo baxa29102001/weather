@@ -38,7 +38,7 @@ const weather_details = [
 
 function WeatherDescription() {
   const [cities, setCities] = useState(cities_s);
-  const [height, setHeight] = useState(false);
+
   const inputRef = useRef();
   const mainData = useSelector((state) => state.weather.weather_data);
   const weather_detail = useSelector((state) => state.weather.details);
@@ -55,9 +55,7 @@ function WeatherDescription() {
   const searchHandler = debounce((e) => {
     dispatch(fetchWeatherThunk(inputRef.current.value || "Tashkent"));
   }, 1000);
-  // const setHeightHandler = () => {
-  //   setHeight(!height);
-  // };
+
   return (
     <div
       className={

@@ -9,7 +9,7 @@ function Weather() {
 
   useEffect(() => {
     dispatch(fetchWeatherThunk("Tashkent"));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="weather_layout">
