@@ -55,9 +55,9 @@ function WeatherDescription() {
   const searchHandler = debounce((e) => {
     dispatch(fetchWeatherThunk(inputRef.current.value || "Tashkent"));
   }, 1000);
-  const setHeightHandler = () => {
-    setHeight(!height);
-  };
+  // const setHeightHandler = () => {
+  //   setHeight(!height);
+  // };
   return (
     <div
       className={
