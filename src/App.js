@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import Weather from "./layouts/Weather";
 
 function App() {
+  const mainData = useSelector((state) => state.weather.weather_data);
+  useEffect(() => {
+    if (!mainData.weather) {
+      document.body.style.backgroundColor = "#4a99d3";
+      // document.body.style.background = "rgb(255, 255, 255)";
+      // document.body.style.background =
+      //   "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, #4a99d3 26%)";
+      return;
+    }
+    if (mainData?.weather?.code >= 800) {
+      document.body.style.backgroundColor = "#4a99d3";
+      // document.body.style.background = "rgb(255, 255, 255)";
+      // document.body.style.background =
+      //   "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, #4a99d3 26%)";
+    } else {
+      document.body.style.backgroundColor = "#0d0d0d";
+    }
+  }, [mainData]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Weather />
     </div>
   );
 }

@@ -1,0 +1,122 @@
+.weather_desc_layout {
+  width: 40%;
+  background-color: #4e718b;
+  padding: 40px;
+  position: relative;
+}
+
+.weather_desc_layout_rainy {
+  background-color: rgba(79, 103, 100, 0.5);
+}
+/* rgba(79, 103, 100, 0.5) */
+.weather_desc_layout hr {
+  border: 1px solid #95adc0;
+  background-color: #95adc0;
+}
+.weather_search_form {
+  margin-bottom: 40px;
+}
+
+.weather_search_form input {
+  width: 80%;
+  padding: 15px 3px;
+  border: none;
+  border-bottom: 1px solid #95adc0;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  /* font-size: 16px; */
+}
+.weather_search_form input::placeholder {
+  color: #95adc0;
+}
+
+.weather_cities {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 50px;
+}
+
+.weather_cities li {
+  margin-bottom: 25px;
+  color: #95adc0;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.weather_details {
+  margin-bottom: 40px;
+}
+
+.weather_details h2 {
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.weather_mini_detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.weather_mini_detail h3 {
+  color: #95adc0;
+  font-size: 18px;
+  font-weight: normal;
+}
+.weather_mini_detail p {
+  color: white;
+  font-size: 18px;
+}
+
+.weather_search_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: #a9cee1;
+  padding: 30px;
+  border: none;
+}
+
+.mini_toolbar {
+  width: 100%;
+  background-color: #4e718b;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media (min-width: 320px) {
+  .weather_desc_layout {
+    width: 100%;
+  }
+
+  .weather_burger_icon svg {
+    fill: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 992px) {
+  .weather_desc_layout {
+    width: 100%;
+  }
+} */
+
+@media (min-width: 320px) {
+  .weather_desc_layout {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather_desc_layout {
+    width: 40%;
+  }
+}
